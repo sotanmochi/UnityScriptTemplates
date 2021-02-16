@@ -1,0 +1,16 @@
+// Copyright (c) #ORGANIZATION# All rights reserved.
+// Licensed under the #LICENSE#. See LICENSE in the project root for license information
+
+using UnityEngine;
+using Zenject;
+
+namespace #NAMESPACE#
+{
+    public class #SCRIPTNAME# : MonoInstaller
+    {
+        public override void InstallBindings()
+        {
+
+        }
+    }
+}
