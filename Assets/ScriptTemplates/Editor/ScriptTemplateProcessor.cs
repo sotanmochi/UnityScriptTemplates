@@ -12,8 +12,6 @@ namespace ScriptTemplates.Editor
 
         public static void OnWillCreateAsset(string assetMetaFilePath)
         {
-            Debug.Log("OnWillCreateAsset is being called with the following asset: " + assetMetaFilePath + ".");
-
             string assetFilePath = assetMetaFilePath.Replace(".meta", "");
 
             string extension = GetExtension(assetFilePath);
