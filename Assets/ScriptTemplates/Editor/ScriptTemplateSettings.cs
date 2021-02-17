@@ -15,5 +15,13 @@ namespace ScriptTemplates.Editor
             "Assets",
             "Scripts",
         };
+        public List<TextReplaceSetting> TextReplaceSettings = new List<TextReplaceSetting>();
+    }
+
+    [Serializable]
+    public class TextReplaceSetting
+    {
+        public string OldText;
+        public string NewText;
     }
 }

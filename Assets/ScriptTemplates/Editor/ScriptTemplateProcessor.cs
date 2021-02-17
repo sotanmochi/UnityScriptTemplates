@@ -38,6 +38,11 @@ namespace ScriptTemplates.Editor
             string joinedFolderName = string.Join(".", folderNames.ToArray());
             content = content.Replace("#NAMESPACE#", joinedFolderName);
 
+            foreach (var replaceSetting in settings.TextReplaceSettings)
+            {
+                content = content.Replace(replaceSetting.OldText, replaceSetting.NewText);
+            }
+
             File.WriteAllText(fullPath, content);
             AssetDatabase.Refresh();
         }
