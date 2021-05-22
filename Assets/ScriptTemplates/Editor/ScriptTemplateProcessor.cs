@@ -36,12 +36,12 @@ namespace ScriptTemplates.Editor
             folderNames.RemoveAt(folderNames.Count - 1);
 
             string joinedFolderName = string.Join(".", folderNames.ToArray());
-            content = content.Replace("#NAMESPACE#", joinedFolderName);
-
-            foreach (var replaceSetting in settings.TextReplaceSettings)
+            foreach (var replaceSetting in settings.FolderNameTextReplaceSettings)
             {
-                content = content.Replace(replaceSetting.OldText, replaceSetting.NewText);
+                joinedFolderName = joinedFolderName.Replace(replaceSetting.OldText, replaceSetting.NewText);
             }
+
+            content = content.Replace("#NAMESPACE#", joinedFolderName);
 
             File.WriteAllText(fullPath, content);
             AssetDatabase.Refresh();

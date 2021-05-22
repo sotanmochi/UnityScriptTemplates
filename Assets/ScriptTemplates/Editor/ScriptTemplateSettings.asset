@@ -17,4 +17,8 @@ MonoBehaviour:
   IgnoredFolderNamesToGenerateNamespace:
   - Assets
   - Scripts
-  TextReplaceSettings: []
+  FolderNameTextReplaceSettings:
+  - OldText: '-'
+    NewText: .
+  - OldText: _
+    NewText: 

@@ -15,7 +15,7 @@ namespace ScriptTemplates.Editor
             "Assets",
             "Scripts",
         };
-        public List<TextReplaceSetting> TextReplaceSettings = new List<TextReplaceSetting>();
+        public List<TextReplaceSetting> FolderNameTextReplaceSettings = new List<TextReplaceSetting>();
     }
 
     [Serializable]
